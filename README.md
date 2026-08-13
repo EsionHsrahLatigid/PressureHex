@@ -45,6 +45,8 @@ ctest --preset plugin-release --output-on-failure
 
 Human-facing products are staged under `artifacts/plugin-release/<platform-arch>/` in `standalone/`, `vst3/`, and macOS `au/`. `build/` is internal compiler state.
 
+For local macOS non-CI `plugin-release` builds, staged VST3 and AU bundles are also physically copied to `~/Library/Audio/Plug-Ins/VST3` and `~/Library/Audio/Plug-Ins/Components`. The Standalone app stays under `artifacts/plugin-release/<platform-arch>/standalone`. Configure with `-DEHL_COPY_PLUGIN_AFTER_BUILD=OFF` to disable the local plugin copy.
+
 ## CI and safety
 
 Caller workflows pin `EsionHsrahLatigid/yup-actions` to a full commit SHA. CI tests and packages macOS arm64 and Windows x64, producing checksummed latest ZIPs; `v*` tags promote exact-SHA CI artifacts without rebuilding. The audio callback allocates no memory and performs no locks, I/O, logging, or UI work. Parameters, non-finite input, gain, and output are bounded; compression response, detector behavior, determinism, extremes, hosted silence/state, and Standalone audition are tested.
