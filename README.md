@@ -1,6 +1,5 @@
 # PressureHex
 
-PressureHex is a YUP stereo compressor designed as an aggressive control surface for Digital Harsh Noise. A feed-forward peak/RMS detector, log-domain soft-knee gain computer, independent attack and release, and optional lookahead can either pin transient walls or make them breathe in severe blocks. Hosted builds preserve silence; Standalone adds an audition source and meters only at compile time.
 
 ## Identity and formats
 

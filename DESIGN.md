@@ -4,7 +4,6 @@
 - Status: Active
 - Last refreshed: 2026-08-12
 - Primary surfaces: YUP Standalone, VST3, AUv2 editor
-- Evidence: dynamics references and the nine-effect Digital Harsh Noise UI survey
 
 ## Product
 - Goal: make density and transient violence directly playable while remaining bounded and automatable.
